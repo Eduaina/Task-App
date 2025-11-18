@@ -1,0 +1,28 @@
+label, input {
+    font-family: "ui-sans-serif", system-ui, sans-serif;
+    font-size: .875rem;
+}
+
+label {
+    font-weight: 500;
+    margin: 10px 0 40px 0;
+}
+
+.flex {
+    display: flex;
+}
+
+input {
+    width: 25rem;
+    height: 3rem;
+    border-radius: .75rem;
+    padding-left: 2.875rem;
+}
+
+img {
+    position: absolute;
+    left: 1.75rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    top: 2.59rem;
+}
