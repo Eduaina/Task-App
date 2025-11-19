@@ -1,11 +1,17 @@
-label, input {
+div {
+    display: flex;
+    flex-direction: column;
     font-family: "ui-sans-serif", system-ui, sans-serif;
     font-size: .875rem;
+    border: 1px solid blue;
+    width: 25rem;
+    height: 4.375rem;
 }
 
 label {
     font-weight: 500;
     margin: 10px 0 40px 0;
+    margin: 0;
 }
 
 .flex {
@@ -15,6 +21,7 @@ label {
 input {
     width: 25rem;
     height: 3rem;
+    margin-top: 3px;
     border-radius: .75rem;
     padding-left: 2.875rem;
 }

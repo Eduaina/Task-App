@@ -1,5 +1,12 @@
-.login-sheet {
+.login-page {
+    border:2px solid black;
+    height: 38.625rem;
+    width: 28rem;
+    position: absolute;
+    top: 1.25rem;
+    left: 28.2rem;
+    overflow: hidden;
+    color: white;
     background-color: black;
-    height: 40%;
-    width: 48rem;
+    z-index: 1;
 }

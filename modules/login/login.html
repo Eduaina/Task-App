@@ -1,7 +1,31 @@
 <link rel="stylesheet" href="/modules/login/login.css" />
 
 
-<section class="login-sheet"> content </section>
+<section class="login-page" >
+    <section class="login-page__top">
+        <figure>
+            <img src="/assets/images/svg/auth-svg/logo.svg" alt="Logo">
+        </figure>
+        <h1>Welcome Back!</h1>
+        <p>Enter your details to access your account</p>
+    </section>
+
+    <section class="login-page__middle">
+        <button class="btn1">Login</button>
+        <button class="btn2">Sign Up</button>
+    </section>
+
+    <form class="login-page__form">
+        <section id="name-input" data-import="/components/input-name/input.html"></section>
+        <section id="email-input" data-import="/components/input-email/input.html"></section>
+        <section id="password-input" data-import="/components/input-password/input.html"></section>
+
+        <section id="button-import">
+            <div id="import-btn1" data-import=""></div>
+            <div id="import-btn2" data-import=""></div>
+        </section>
+    </form>
+</section>
 
 
 <script src="/modules/login/login.css"></script>
