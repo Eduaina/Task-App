@@ -1,14 +1,25 @@
-section.login-page {
-    height: 38.625rem;
+.login-page {
+    min-height: 39rem;
+    max-height: 42.7rem;
+    /* height: auto; */
     width: 28rem;
     position: absolute;
     top: 1.25rem;
     left: 28.2rem;
-    overflow: hidden;
     z-index: 1;
     background-color: #fff;
     box-shadow: -1px 5px 40px 1px #d1d2d3;
-    border-radius: .75rem;
+    border-radius: .75rem; 
+}
+
+.signup {
+    opacity: 0;
+}
+
+.active{
+    max-height: 51rem;
+    width: 28rem;
+    opacity: 1;
 }
 
 .login-page__top {
@@ -18,8 +29,8 @@ section.login-page {
 }
 
 .login-page__top img {
-    width: 5rem;
-    height: 5rem;
+    width: 5.2rem;
+    height: 5.45rem;
     position: absolute;
     left: 11.5rem;
     top: .7rem;
@@ -29,7 +40,7 @@ h1 {
     font-size: 1.9rem;
     position: relative;
     top: 6.8rem;
-    left: 7.1rem;
+    left: 6.9rem;
     font-weight: 700;
     line-height: 2.25rem;
 }
@@ -38,14 +49,24 @@ p {
     position: relative;
     line-height: 1.5rem;
     font-size: 1rem;
-    top: 5.96rem;
-    left: 5rem;
+    top: 6.1rem;
+    left: 3.9rem;
     color: #596371;
+}
+
+.h1-page__top {
+    top: 6.8rem;
+    left: 7.2rem;
+}
+
+.p-page__top {
+    top: 6rem;
+    left: 5rem;
 }
 
 .login-page__middle {
     position: relative;
-    left: 1.65rem;
+    left: 1.4rem;
     width: 25rem;
     height: 2.25rem;
     background-color: #F3F4F6;
@@ -82,10 +103,71 @@ p {
     left: 1.4rem;
 }
 
+.password-text {
+    font-size: .75rem;
+    color: #9096A2;
+    position: relative;
+    top: -3px;
+    left: 2px;
+}
+
+.invalid-login {
+    width: 25rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    outline: .1px solid rgba(255, 0, 0, 0.184);
+    background-color: #FEF2F2;
+    border-radius: .75rem;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #e7000b;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+}
+
+.invalid-login.active {
+    max-height: 2.8rem;
+    opacity: 1;
+    margin: 1.25rem 0 0 0;
+    padding: .9rem;
+}
+
+.invalid-signup {
+    width: 25rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    outline: .1px solid rgba(255, 0, 0, 0.184);
+    background-color: #FEF2F2;
+    border-radius: .75rem;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #e7000b;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+}
+
+.invalid-signup.active {
+    max-height: 2.8rem;
+    opacity: 1;
+    padding: .9rem;
+}
+
 .button-imports {
     display: flex;
     gap: 1rem;
-    margin-top: 1.9rem;
+    margin: 1.7rem 0 0 .05rem;
+}
+
+.button-imports.su {
+    margin: .7rem 0 0 .05rem;
 }
 
 .foot-texts {
@@ -94,7 +176,7 @@ p {
     bottom: -2.33rem;
     font-size: .875rem;
     text-align: center;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
 }
 
 .text-span, .a {

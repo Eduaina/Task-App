@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/modules/auth-mod/login/valid.css">
 
-<section class="login-page" >
+<section class="login-page signup">
     <section class="login-page__top">
         <figure>
             <img src="/assets/images/svg/auth-svg/logo.svg" alt="Logo">
@@ -20,7 +20,11 @@
         <section class="password-input" data-import="/components/input-password/input.html"></section>
         <p class="password-text">Password must be at least 6 characters long</p>
 
-        <section id="button-imports" class="button-imports">
+        <div class="invalid-signup">
+            Invalid login credentials
+        </div>
+
+        <section id="button-imports" class="button-imports su">
             <div id="import-btn1" data-import="/components/btn-help/btn.html"></div>
             <div id="import-btn2" data-import="/components/btn-next-step/btn.html"></div>
         </section>

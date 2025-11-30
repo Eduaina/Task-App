@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="/modules/auth-mod/login/valid.css">
 
-<section class="login-page" id="loginPage">
+<section class="login-page">
     <section class="login-page__top">
         <figure>
             <img src="/assets/images/svg/auth-svg/logo.svg" alt="Logo">
         </figure>
-        <h1>Welcome Back!</h1>
-        <p>Enter your details to access your account</p>
+        <h1 class="h1-page__top">Welcome Back!</h1>
+        <p class="p-page__top">Enter your details to access your account</p>
     </section>
 
     <section class="login-page__middle">
@@ -17,6 +17,10 @@
     <form class="login-page__form">
         <section class="email-input" data-import="/components/input-email/input.html"></section>
         <section class="password-input" data-import="/components/input-password/input.html"></section>
+
+        <div class="invalid-login">
+            Invalid login credentials
+        </div>
 
         <section id="button-imports" class="button-imports">
             <div id="import-btn1" data-import="/components/btn-help/btn.html"></div>
