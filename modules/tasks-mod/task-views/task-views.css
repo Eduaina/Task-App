@@ -1,0 +1,7 @@
+/* Basic view toggling */
+.task-views-content .view.hidden {
+    display: none;
+}
+.task-views-content .view.active {
+    display: block;
+}

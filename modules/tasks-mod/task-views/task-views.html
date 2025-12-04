@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/modules/tasks-mod/task-views/task-views.css">
+
+<div class="task-tabs">
+    <div data-import="/components/tasks-comp/tab-button/tab-button.html" id="tab-my-tasks" data-tab-name="my-tasks" data-tab-label="My Tasks" class="active"></div>
+    <div data-import="/components/tasks-comp/tab-button/tab-button.html" id="tab-ai-summary" data-tab-name="ai-summary" data-tab-label="AI Summary"></div>
+</div>
+
+<div class="task-views-content">
+    
+    <div id="my-tasks-view" data-view="my-tasks" class="view active">
+        <div class="task-counts">
+            <div class="task-count-item">
+                <span id="active-count" class="task-count-number">0</span>
+                <span class="task-count-label">Active tasks</span>
+            </div>
+            <div class="task-count-item">
+                <span id="completed-count" class="task-count-number task-count-completed">0</span>
+                <span class="task-count-label">Completed</span>
+            </div>
+        </div>
+        
+        <div class="add-task-btn-wrapper">
+             <button id="show-create-task-modal" class="btn-primary"><i class="fa-solid fa-plus"></i> Add Task</button>
+        </div>
+
+        <div id="no-tasks-placeholder" class="empty-task-placeholder">
+            <i class="fa-solid fa-check-double"></i>
+            <p>No tasks yet</p>
+            <p><small>Click "Add Task" to create your first task</small></p>
+        </div>
+
+        <div id="tasks-list" class="task-list" style="display: none;">
+            <div id="active-tasks-container">
+                </div>
+            <div id="completed-tasks-container" class="task-list-completed" style="display: none;">
+                <h3>Completed</h3>
+                </div>
+        </div>
+    </div>
+
+
+    <div id="ai-summary-view" data-view="ai-summary" class="view hidden">
+        
+        <div class="ai-summary-view">
+            <h2>AI-Powered Task Summary</h2>
+            <small>Get insights and recommendations for your tasks</small>
+            
+            <div class="add-task-btn-wrapper" style="top: 25px; right: 20px;">
+                <button class="btn-primary"><i class="fa-solid fa-wand-magic-sparkles"></i> Generate New</button>
+            </div>
+
+            <div class="ai-summary-tabs">
+                <button class="tab-button active" data-tab-name="latest">
+                    <i class="fa-solid fa-clock"></i> Latest Summary
+                </button>
+                <button class="tab-button" data-tab-name="history">
+                    <i class="fa-solid fa-history"></i> History (0)
+                </button>
+            </div>
+            
+            <div class="ai-summary-placeholder">
+                <i class="fa-solid fa-chart-simple"></i>
+                <p>No summary generated yet</p>
+                <p><small>Click "Generate New" to get AI-powered insights</small></p>
+            </div>
+
+        </div>
+    </div>
+
+</div>

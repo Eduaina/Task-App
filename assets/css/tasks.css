@@ -1,0 +1,132 @@
+/* Custom CSS variables specific to tasks (if any) */
+:root {
+    --color-high-priority: #e74c3c;
+    --color-medium-priority: #f39c12;
+    --color-low-priority: #2ecc71;
+}
+
+.task-management-area {
+    background-color: var(--color-card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+/* Tabs/Toggle */
+.task-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 20px;
+}
+
+/* Active/Completed Task */
+.task-counts {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-count-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.task-count-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.task-count-label {
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+.task-count-completed {
+    color: var(--color-green);
+}
+
+.add-task-btn-wrapper {
+    position: absolute;
+    top: 170px; /* Adjust based on header height */
+    right: 50px; /* Align to the right edge of main content */
+    z-index: 10;
+}
+
+.task-list {
+    margin-top: 15px;
+}
+
+.task-list-completed {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--color-border);
+}
+
+.task-list-completed h3 {
+    font-size: 16px;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+}
+
+/* Placeholder/*/
+.empty-task-placeholder {
+    text-align: center;
+    padding: 50px 0;
+    border: 1px dashed var(--color-border);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.empty-task-placeholder .fa-circle-notch, .empty-task-placeholder .fa-solid.fa-check-double {
+    font-size: 32px;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+.empty-task-placeholder p {
+    color: var(--color-text-light);
+}
+
+/* Ai summary */
+.ai-summary-view {
+    padding: 20px 0;
+}
+
+.ai-summary-view h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+}
+
+.ai-summary-view small {
+    display: block;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+}
+
+.ai-summary-tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.ai-summary-tabs .tab-button.active {
+    font-weight: 600;
+}
+
+.ai-summary-placeholder {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.ai-summary-placeholder i {
+    font-size: 40px;
+    color: var(--color-border);
+}

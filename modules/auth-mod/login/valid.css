@@ -1,18 +1,18 @@
-.login-page {
+.login-page, .signup-page {
     min-height: 39rem;
     max-height: 42.7rem;
-    /* height: auto; */
+    height: auto;
     width: 28rem;
     position: absolute;
     top: 1.25rem;
     left: 28.2rem;
     z-index: 1;
     background-color: #fff;
-    box-shadow: -1px 5px 40px 1px #d1d2d3;
+    box-shadow: 0px 0px 40px 0px #d1d2d3;
     border-radius: .75rem; 
 }
 
-.signup {
+.signup-page {
     opacity: 0;
 }
 

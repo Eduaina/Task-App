@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/modules/tasks-mod/popup-modal/popup-modal.css">
+
+<div class="modal-backdrop hidden" id="create-task-modal-backdrop">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fa-solid fa-list-check"></i> Create New Task</h2>
+            <button class="modal-close-btn" id="close-create-task-modal">&times;</button>
+        </div>
+        <p class="modal-subtitle">Add a new task to your productivity list</p>
+
+        <form id="create-task-form">
+            <div class="form-group">
+                <label for="task-title">Title</label>
+                <input type="text" id="task-title" placeholder="Enter task title" required>
+            </div>
+            <div class="form-group">
+                <label for="task-description">Description</label>
+                <textarea id="task-description" placeholder="Add task details..."></textarea>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="task-priority">Priority</label>
+                    <select id="task-priority" required>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="task-due-date">Due Date</label>
+                    <input type="date" id="task-due-date" placeholder="dd/mm/yyyy">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" id="cancel-create-task">Cancel</button>
+                <button type="submit" class="btn-primary">Create Task</button>
+            </div>
+        </form>
+    </div>
+</div>

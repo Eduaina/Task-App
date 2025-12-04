@@ -1,0 +1,15 @@
+.recent-tasks {
+    grid-column: 1 / 2; /* Takes the first column */
+    min-height: 250px;
+}
+
+.no-tasks-placeholder {
+    text-align: center;
+    padding: 50px 0;
+    color: var(--color-text-light);
+}
+
+.no-tasks-placeholder i {
+    font-size: 32px;
+    margin-bottom: 10px;
+}

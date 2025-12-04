@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="/modules/auth-mod/login/valid.css">
 
 <section class="login-page">
     <section class="login-page__top">
@@ -10,21 +9,21 @@
     </section>
 
     <section class="login-page__middle">
-        <button class="bttn one" type="button">Login</button>
-        <button class="bttn two" type="button">Sign Up</button>
+        <button class="bttn one" id="loginOne" type="button">Login</button>
+        <button class="bttn two" id="loginTwo" type="button">Sign Up</button>
     </section>
 
     <form class="login-page__form">
-        <section class="email-input" data-import="/components/input-email/input.html"></section>
-        <section class="password-input" data-import="/components/input-password/input.html"></section>
+        <section class="email-input" id="loginEmail" data-import="components/auth-comp/input-email/input.html"></section>
+        <section class="password-input" id="loginPassword" data-import="components/auth-comp/input-password/input.html"></section>
 
         <div class="invalid-login">
             Invalid login credentials
         </div>
 
         <section id="button-imports" class="button-imports">
-            <div id="import-btn1" data-import="/components/btn-help/btn.html"></div>
-            <div id="import-btn2" data-import="/components/btn-next-step/btn.html"></div>
+            <div id="loginHelp" data-import="components/auth-comp/btn-help/btn.html"></div>
+            <div id="loginNext" data-import="components/auth-comp/btn-next-step/btn.html"></div>
         </section>
     </form>
     <article class="foot-texts">
@@ -34,4 +33,4 @@
     </article>
 </section>
 
-<script src="/assets/js/auth.js/"></script>
+<script src="/assets/js/auth.js"></script>

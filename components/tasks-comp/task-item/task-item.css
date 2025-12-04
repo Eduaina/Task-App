@@ -1,0 +1,131 @@
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color 0.2s;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-check {
+    margin-right: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.task-check input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.task-check label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.task-check input:checked ~ label {
+    background-color: var(--color-primary);
+}
+
+.task-check label:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.task-check input:checked ~ label:after {
+    display: block;
+}
+
+.task-details {
+    flex-grow: 1;
+}
+
+.task-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 2px;
+}
+
+.task-description {
+    font-size: 14px;
+    color: var(--color-text-light);
+    margin-bottom: 2px;
+}
+
+.task-due-date {
+    font-size: 12px;
+    color: var(--color-text-light);
+}
+
+/* Completed state styling */
+.task-item[data-status="completed"] .task-title,
+.task-item[data-status="completed"] .task-description {
+    text-decoration: line-through;
+    color: var(--color-text-light);
+}
+.task-item[data-status="completed"] .task-priority {
+    display: none; /* Hide priority tag on completed tasks */
+}
+.task-item[data-status="completed"] .task-check label {
+    background-color: var(--color-green);
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+}
+
+.task-priority {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    color: white;
+    margin-right: 15px;
+}
+
+.task-priority.high {
+    background-color: var(--color-high-priority);
+}
+.task-priority.medium {
+    background-color: var(--color-medium-priority);
+}
+.task-priority.low {
+    background-color: var(--color-low-priority);
+}
+
+.task-delete-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px;
+    transition: color 0.2s;
+}
+
+.task-delete-btn:hover {
+    color: var(--color-high-priority);
+}

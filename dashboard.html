@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task App Dashboard</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css"/>
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/aside.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Smart Task App Dashboard</title>
 </head>
 <body>
-    
+
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Loading TaskMaster...</p>
+    </div>
+
+    <div id="dashboard-container" class="hidden">
+        
+        <aside id="aside-import" data-import="modules/aside/aside.html"></aside>
+
+        <main class="dashboard-main">
+            <header>
+                <h1 id="greeting-header">Good morning, User!</h1>
+                <p>Here's what's happening with your productivity today</p>
+            </header>
+            
+            <section class="dashboard-stats-grid">
+                <div id="cards-import" data-import="modules/dash-mod/cards/cards.html"></div>
+            </section>
+
+            <section class="dashboard-bottom-grid">
+                <div id="recent-tasks-import" data-import="modules/dash-mod/recent-tasks/recent-tasks.html"></div>
+                <div id="quick-actions-import" data-import="modules/dash-mod/quick-actions/quick-actions.html"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/dashboard.js"></script>
 </body>
 </html>

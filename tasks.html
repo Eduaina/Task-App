@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css"/>
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <!-- <link rel="stylesheet" href="/assets/css/dashboard.css"> -->
+    <link rel="stylesheet" href="/assets/css/tasks.css">
+    <link rel="stylesheet" href="assets/css/aside.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Smart Task App-Tasks</title>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="tasks-container" class="hidden">
+        
+        <aside id="aside-import" data-import="modules/aside/aside.html"></aside>
+
+        <main class="tasks-main">
+            <div data-import="modules/page-header/page-header.html"></div>
+            
+            <section class="task-management-area">
+                <div data-import="modules/tasks-mod/task-views/task-views.html"></div>
+            </section>
+        </main>
+
+        <div data-import="modules/tasks-mod/popup-modal/popup-modal.html"></div>
+    </div>
+
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/tasks.js"></script>
+</body>
+</html>

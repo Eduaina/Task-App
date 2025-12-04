@@ -1,0 +1,43 @@
+.quick-actions {
+    grid-column: 2 / 3; /* Takes the second column in the dashboard-bottom-grid */
+    min-height: 250px;
+}
+
+.action-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.action-item:hover {
+    background-color: #f9f9f9;
+}
+
+.action-item i {
+    font-size: 24px;
+    color: var(--color-primary);
+    margin-right: 15px;
+    width: 25px;
+    text-align: center;
+}
+
+.action-text p {
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+.action-text small {
+    color: var(--color-text-light);
+    font-size: 12px;
+}
+
+.action-list hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;}

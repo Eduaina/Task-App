@@ -1,0 +1,23 @@
+.tab-button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--color-text-light);
+    transition: color 0.2s;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.tab-button i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.tab-button.active {
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+    font-weight: 500;
+}

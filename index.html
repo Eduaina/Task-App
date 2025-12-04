@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
     <!-- css -->
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css"/>
-    <!-- <link rel="stylesheet" href="/assets/css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css"/>
     <link rel="stylesheet" href="/assets/css/global.css" />
-    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/auth.css">
 
     <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Smart Task Manager App - Authentication Page</title>
-  </head>
+    <title>Smart Task App - Authentication Page</title>
+</head>
 
-  <body>
+<body>
+    <div class="background">
+        <div class="left">
+            <div class="circle blue"></div>
+            <div class="circle purple"></div>
+        </div>
 
-    <section class="container">
-      <main class="root__main">
-        <section id="login" data-import="/modules/login/login.html"></section>
-      <!-- <section id="signup" data-import="/modules/signup/signup.html" class="hidden"></section> -->
-      </main>
-      
-    </section>
+        <div class="right">
+            <div class="circle yellow"></div>
+            <div class="static-yellow"></div>
+            <div class="triangle-wrapper">
+                <img src="/assets/images/svg/auth-svg/arrrow-up.svg" alt="Triangle" class="triangle">
+            </div>
+            <div class="arrow-wrapper">
+                <img src="/assets/images/svg/auth-svg/green-arrow.svg" alt="Green arrow" class="arrow">
+            </div>
+        </div>
+    </div>
 
+    <main class="main">
+        <section class="login active" data-import="modules/auth-mod/login/login.html"></section>
+        <section class="signup hidden" data-import="modules/auth-mod/signup/signup.html"></section>
+    </main>
+    
 
     <script src="/assets/js/global.js"></script>
-  </body>
+    <script src="/assets/js/auth.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", async () => {
+            await window.loadAllComponents?.();
+            if (typeof initAuth === "function") initAuth();
+        });
+    </script>
+
+</body>
 </html>

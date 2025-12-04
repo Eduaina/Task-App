@@ -1,0 +1,127 @@
+.aside {
+    width: 260px;
+    height: 100vh;
+    background-color: var(--color-card-background);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Logo/Title */
+.aside-header {
+    padding: 0 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 20px;
+}
+
+.aside-header i {
+    color: var(--color-primary);
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.aside-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+/* User Info */
+.aside-user {
+    padding: 0 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 20px;
+}
+
+.aside-user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.aside-user-info p {
+    font-size: 14px;
+    color: var(--color-text-dark);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.aside-user-info small {
+    font-size: 12px;
+    color: var(--color-text-light);
+}
+
+/* Navigation */
+.aside-nav {
+    flex-grow: 1;
+}
+
+.aside-nav ul {
+    list-style: none;
+}
+
+.aside-nav ul li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--color-text-dark);
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 14px;
+}
+
+.aside-nav ul li a.active {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    border-radius: 0 25px 25px 0;
+    margin-right: 15px;
+}
+
+.aside-nav ul li a:not(.active):hover {
+    background-color: #f0f0f0;
+}
+
+.aside-nav ul li a i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Logout Button */
+.aside-logout {
+    padding: 0 20px 10px 20px;
+    margin-top: auto;
+}
+
+.aside-logout a {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    text-decoration: none;
+    color: #e74c3c;
+    font-weight: 600;
+    border-top: 1px solid var(--color-border);
+}
+
+.aside-logout a i {
+    margin-right: 15px;
+    width: 20px;
+}
