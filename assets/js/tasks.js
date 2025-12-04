@@ -1,12 +1,5 @@
-// assets/js/tasks.js
-
-// --- Mock User Data (Placeholder for page header) ---
 const MOCK_USER_NAME = "Ins";
-
-// --- Task Data Store ---
-let tasks = []; // Stores all active and completed tasks
-
-// --- Utility Functions ---
+let tasks = [];
 
 function updateTaskCounts() {
   const activeCount = tasks.filter((task) => task.status === "active").length;
@@ -45,7 +38,7 @@ function renderTasks() {
       )
     : document.createElement("div");
 
-  // Set a unique ID for the completed tasks container if it was just created
+  // Set ID for the completed tasks
   if (!completedContainer.id) {
     completedContainer.id = "completed-list";
     document
@@ -78,7 +71,6 @@ function renderTasks() {
       ? `Due: ${task.dueDate}`
       : "No Due Date";
 
-    // Set checkbox state and priority
     const checkbox = item.querySelector('.task-check input[type="checkbox"]');
     checkbox.checked = task.status === "completed";
     checkbox.id = `task-${task.id}`;
@@ -88,9 +80,8 @@ function renderTasks() {
 
     const prioritySpan = item.querySelector(".task-priority");
     prioritySpan.textContent = task.priority;
-    prioritySpan.className = `task-priority ${task.priority}`; // Sets the color class
+    prioritySpan.className = `task-priority ${task.priority}`;
 
-    // Attach event listeners
     item
       .querySelector(".task-delete-btn")
       .addEventListener("click", () => deleteTask(task.id));
@@ -117,7 +108,7 @@ function addTask(title, description, priority, dueDate) {
     dueDate: dueDate || null,
     status: "active",
   };
-  tasks.unshift(newTask); // Add new task to the top
+  tasks.unshift(newTask);
   renderTasks();
 }
 
@@ -131,12 +122,10 @@ function toggleTaskStatus(id, isChecked) {
   if (taskIndex !== -1) {
     tasks[taskIndex].status = isChecked ? "completed" : "active";
 
-    // Re-render to move the task between lists
     renderTasks();
   }
 }
 
-// --- Event Handlers ---
 
 function handleTabToggle(tabName) {
   const views = document.querySelectorAll(".task-views-content .view");
@@ -171,14 +160,15 @@ function setupModalListeners() {
   const showModal = () => modalBackdrop.classList.remove("hidden");
   const hideModal = () => {
     modalBackdrop.classList.add("hidden");
-    form.reset(); // Clear form on close/cancel
+    form.reset();
   };
 
   if (showBtn) showBtn.addEventListener("click", showModal);
   if (closeBtn) closeBtn.addEventListener("click", hideModal);
   if (cancelBtn) cancelBtn.addEventListener("click", hideModal);
 
-  // Form Submission
+
+
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -192,7 +182,6 @@ function setupModalListeners() {
     });
   }
 
-  // Tab Listeners
   document.querySelectorAll(".task-tabs .tab-button").forEach((button) => {
     button.addEventListener("click", (e) => {
       const tabName = e.currentTarget.dataset.tabName;
@@ -201,27 +190,20 @@ function setupModalListeners() {
   });
 }
 
-// --- Initialization ---
-
 function initTasksPage() {
-  // 1. Set Page Header
   const pageTitle = document.getElementById("page-title");
   const pageSubtitle = document.getElementById("page-subtitle");
   if (pageTitle) pageTitle.textContent = "Task Management";
   if (pageSubtitle) pageSubtitle.textContent = "Manage and track your tasks";
 
-  // 2. Set Active Sidebar Link
   const aside = document.getElementById("aside-import");
   if (aside) {
-    // Remove active class from Dashboard and add to Tasks (handled by aside.html update)
   }
 
-  // 3. Setup Modal and Tab listeners
+
   setupModalListeners();
 
-  // 4. Initial Render (Simulate data from screenshots 380/382 for initial load)
   tasks = [
-    // Example Active Task
     {
       id: 101,
       title: "completing the task page",
@@ -230,7 +212,7 @@ function initTasksPage() {
       dueDate: "2025-12-01",
       status: "active",
     },
-    // Example Completed Task 1
+
     {
       id: 102,
       title: "completing the task page",
@@ -239,7 +221,7 @@ function initTasksPage() {
       dueDate: null,
       status: "completed",
     },
-    // Example Completed Task 2
+  
     {
       id: 103,
       title: "completing the task page",
@@ -252,7 +234,7 @@ function initTasksPage() {
   renderTasks();
 }
 
-// Function to handle the loading screen
+// Function to handle the loading
 function handleLoadingScreen() {
   const loader = document.getElementById("loader");
   const tasksContainer = document.getElementById("tasks-container");
@@ -263,9 +245,8 @@ function handleLoadingScreen() {
     setTimeout(() => {
       if (loader) loader.classList.add("hidden");
       if (tasksContainer) tasksContainer.classList.remove("hidden");
-    }, 2000); // 2-second delay
+    }, 1000);
   });
 }
 
-// Call the loading handler when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", handleLoadingScreen);

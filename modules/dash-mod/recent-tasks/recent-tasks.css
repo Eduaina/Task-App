@@ -1,5 +1,5 @@
 .recent-tasks {
-    grid-column: 1 / 2; /* Takes the first column */
+    grid-column: 1 / 2;
     min-height: 250px;
 }
 

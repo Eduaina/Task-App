@@ -7,9 +7,8 @@
 }
 
 .tasks-main {
-    /* Ensure padding for the main content area */
     padding: 30px; 
-    margin-left: 260px; /* Space for fixed aside */
+    margin-left: 260px;
 }
 
 .header-icon-wrapper img{
