@@ -301,8 +301,8 @@ p {
 
 /* loader */
 .loader {
-  border: 2px solid #f3f3f3;
-  color: rgb(91, 89, 89);
+  border: 2px solid #646363;
+  color: #252525;
   border-top: 2px solid #ffc107;
   border-radius: 50%;
   width: 14px;

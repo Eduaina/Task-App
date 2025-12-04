@@ -1,6 +1,3 @@
-// assets/js/dashboard.js
-
-// --- Mock User Data from "Signup" (as requested) ---
 const MOCK_USER_NAME = "Ins";
 const MOCK_USER_EMAIL = "eduaighalo22@gmail.com";
 
