@@ -1,4 +1,4 @@
-/* Custom CSS variables specific to tasks (if any) */
+
 :root {
     --color-high-priority: #e74c3c;
     --color-medium-priority: #f39c12;
@@ -12,7 +12,7 @@
     padding: 20px;
 }
 
-/* Tabs/Toggle */
+/*Toggle */
 .task-tabs {
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@
     margin-bottom: 20px;
 }
 
-/* Active/Completed Task */
+/*Completed Task */
 .task-counts {
     display: flex;
     align-items: center;
@@ -52,8 +52,8 @@
 
 .add-task-btn-wrapper {
     position: absolute;
-    top: 170px; /* Adjust based on header height */
-    right: 50px; /* Align to the right edge of main content */
+    top: 170px;
+    right: 50px;
     z-index: 10;
 }
 
@@ -73,7 +73,7 @@
     margin-bottom: 15px;
 }
 
-/* Placeholder/*/
+
 .empty-task-placeholder {
     text-align: center;
     padding: 50px 0;

@@ -87,7 +87,7 @@ textarea {
     margin-top: 20px;
 }
 
-/* Reusing Global Button Styles for Modals */
+
 .btn-primary {
     background-color: var(--color-primary);
     color: white;
