@@ -3,16 +3,23 @@
     min-height: 250px;
 }
 
+.head {
+    display: flex;
+    gap: 20px;
+}
+
 .action-item {
     display: flex;
     align-items: center;
     padding: 10px 0;
     cursor: pointer;
+    background-color: #f9f9f9;
+    border: 1px solid #f9f9f9;;
     transition: background-color 0.2s;
 }
 
-.action-item:hover {
-    background-color: #f9f9f9;
+.tasks .action-item:hover {
+    background-color: #06B6D4;
 }
 
 .action-item i {
