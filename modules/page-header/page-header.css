@@ -12,11 +12,10 @@
     margin-left: 260px; /* Space for fixed aside */
 }
 
-.header-icon-wrapper {
-    background-color: var(--color-primary);
+.header-icon-wrapper img{
     color: white;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
