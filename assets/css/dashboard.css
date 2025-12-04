@@ -1,12 +1,10 @@
 :root {
     --color-primary: #5c62d6;
- 
     --color-text-light: #555;
     --color-background: #f4f6f8;
     --color-card-background: #fff;
     --color-border: #eee;
     --color-blue: #5c62d6;
-    --color-green: #37b752;
     --color-purple: #9063c6;
 
 
@@ -18,6 +16,8 @@
     --red-text: #e7000b;
     --red-hover: #FEF2F2;
     --color-text-dark: #1e293b;
+    --color-teal: #0092B8;
+    --color-green: #00A63E;
 }
 
 body {
@@ -92,23 +92,25 @@ header p {
 
 /* Dashboard Grids */
 .dashboard-stats-grid {
-    position: relative;
-    right: 12rem;
     display: grid;
+    position: relative;
+    right: 16.5rem;
     grid-template-columns: repeat(4, 1fr); 
     gap: 1.2rem;
     margin-top: 2.1875rem;
 }
 
-.dashboard-stats-grid:nth-child(4) {
+.dashboard-stats-grid .task-stats-card:nth-child(5) {
     position: relative;
-    left: 25rem;
+    top: -11.6rem; 
+    left: 66rem;
 }
 
 .dashboard-bottom-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
+    margin-top: -8.5rem;
 }
 
 /* General Module Styling */

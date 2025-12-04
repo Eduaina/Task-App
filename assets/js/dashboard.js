@@ -3,7 +3,6 @@ const MOCK_USER_EMAIL = "eduaighalo22@gmail.com";
 
 // Function to handle the personalized greeting and user info
 function setDashboardData() {
-  // Update Aside Info
   const asideName = document.getElementById("aside-name");
   const asideEmail = document.getElementById("aside-email");
   if (asideName) asideName.textContent = MOCK_USER_NAME;
@@ -22,7 +21,7 @@ function setDashboardData() {
     greeting = "Good evening";
   }
 
-  // Update Greeting Header
+
   const greetingHeader = document.getElementById("greeting-header");
   if (greetingHeader) {
     greetingHeader.textContent = `${greeting}, ${MOCK_USER_NAME}!`;
@@ -35,7 +34,7 @@ const cardData = [
     title: "Active Tasks",
     value: "0",
     subtext: "0 completed",
-    iconClass: "fa-list-check",
+    iconClass: `fa-regular fa-square-check" style="color: #f4f6fb;`,
     colorClass: "blue",
   },
   {
@@ -43,7 +42,7 @@ const cardData = [
     value: "$0.00",
     subtext: "This period",
     iconClass: "fa-dollar-sign",
-    colorClass: "green",
+    colorClass: "teal",
   },
   {
     title: "Total Notes",
@@ -57,47 +56,39 @@ const cardData = [
     value: "0%",
     subtext: "Task completion",
     iconClass: "fa-chart-pie",
-    colorClass: "purple",
+    colorClass: "deepblue",
   },
 ];
 
 function populateCards() {
-  const cardsContainer = document.querySelector(".dashboard-stats-grid");
+  const grid = document.querySelector(".dashboard-stats-grid");
+  const templateContainer = document.querySelector("#card-template-container");
 
-  // Select the single template imported via the 'cards' module
-  const cardTemplateContainer = document.querySelector(
-    "#card-template-container"
+  if (!templateContainer) return;
+
+  const cardTemplate = templateContainer.querySelector(
+    ".task-stats-card.template"
   );
-  const cardTemplate = cardTemplateContainer
-    ? cardTemplateContainer.querySelector(".task-stats-card.template")
-    : null;
+  if (!cardTemplate) return;
 
-  if (!cardTemplate) {
-    console.error("Card template not found.");
-    return;
-  }
+  templateContainer.style.display = "none";
 
-  // Hide the container holding only the template
-  cardTemplateContainer.style.display = "none";
-
-  // Populate the 4 Cards
   cardData.forEach((data) => {
     const card = cardTemplate.cloneNode(true);
     card.classList.remove("template");
 
-    // Apply dynamic data
     card.querySelector(".card-title").textContent = data.title;
     card.querySelector(".card-value").textContent = data.value;
     card.querySelector(".card-subtext").textContent = data.subtext;
 
-    // Apply icon and color
     const iconDiv = card.querySelector(".card-icon-wrapper");
     iconDiv.innerHTML = `<i class="fa-solid ${data.iconClass}"></i>`;
     iconDiv.className = `card-icon-wrapper ${data.colorClass}`;
 
-    cardsContainer.appendChild(card);
+    grid.appendChild(card);
   });
 }
+
 
 // Function to simulate the 2-second loading screen
 function handleLoadingScreen() {
@@ -115,7 +106,7 @@ function handleLoadingScreen() {
       setTimeout(() => {
         if (loader) loader.classList.add("hidden");
         if (dashboardContainer) dashboardContainer.classList.remove("hidden");
-      }, 2000);
+      }, 1000);
     });
   } else {
     console.error("global.js failed to load or define loadAllComponents.");
